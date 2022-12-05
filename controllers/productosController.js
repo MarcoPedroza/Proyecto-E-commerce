@@ -10,12 +10,12 @@ exports.obtenerProducto = async (req, res) => {
 
     const { categoriaId } = req.body;
 
-    /* try{
+     try{
         const producto = await Productos.find({ categoriaId: req.categoria.id });
         res.json({ producto });
     }catch(error){
         console.log(error);
-    } */
+    }
 };
 
 exports.crearProducto = async (req, res) => {
