@@ -6,12 +6,17 @@ const usuarioRouters = require("./routes/usuarioRoutes");
 const categoriasRouters = require("./routes/categoriasRouters");
 const productosRouters = require("./routes/productosRouters");
 const auth = require("./routes/auth");
+// 7- Importar CORS (comunicar back y front)
+const cors = require("cors");
 
 // 1- Llamar a la variable express
 const app = express ();
 
 // 1- Función que conecta a la BD
 conectarDB();
+
+// 7- Habilitar cors
+app.use(cors());
 
 // 2- Habilitar expresiones tipo json para definir las rutas (los deje pasar de capa en capa)
 app.use(express.json({ extended: true }));

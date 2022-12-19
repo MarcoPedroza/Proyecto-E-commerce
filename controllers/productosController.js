@@ -8,14 +8,14 @@ const Categorias = require("../models/Categorias");
 exports.obtenerProducto = async (req, res) => {
     //res.status(200).json({ msg: "Obtener Producto" });
 
-    const { categoriaId } = req.body;
+    //const { categoriaId } = req.body;
 
-     try{
-        const producto = await Productos.find({ categoriaId: req.categoria.id });
-        res.json({ producto });
-    }catch(error){
-        console.log(error);
-    }
+    //try{
+    //    const producto = await Productos.find({ categoriaId: req.categoria.id });
+    //    res.json({ producto });
+    //}catch(error){
+    //    console.log(error);
+    //}
 };
 
 exports.crearProducto = async (req, res) => {

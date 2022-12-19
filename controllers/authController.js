@@ -21,7 +21,7 @@ exports.autenticarUsuario = async (req, res) => {
 
         // 4- Se usa negación: si es False = no existe el usuario
         if(!usuario){
-            return res.status(404).json({ msg: "El usuario no existe"});
+             return res.status(404).json({ msg: "El usuario no existe"});
         }
         // 4- Revisar el password
         const passwordCorrecto = await bcryptjs.compare(password, usuario.password);
